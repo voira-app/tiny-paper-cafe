@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Paper Café | Bern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Splash Screen Intro -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-logo">
+            <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 20 20
+                         q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0
+                         q 10 10 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20
+                         q -10 10 -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0
+                         q -10 -10 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20" 
+                      stroke="var(--primary-color)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+                <rect x="40" y="40" width="160" height="220" stroke="var(--primary-color)" stroke-width="1.5" />
+                <text x="120" y="95" font-family="'Special Elite', cursive" font-size="44" fill="var(--primary-color)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">Tiny</text>
+                <text x="120" y="155" font-family="'Special Elite', cursive" font-size="44" fill="var(--primary-color)" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PAPER</text>
+                <text x="120" y="215" font-family="'Special Elite', cursive" font-size="44" fill="var(--primary-color)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CAFÉ</text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- 1. Navigation -->
+    <nav>
+        <a href="#" class="nav-logo special-font">Tiny Paper Café</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#reserve">Reserve</a>
+        </div>
+    </nav>
+
+    <!-- 2. Hero -->
+    <section class="hero" id="heroSection">
+        <div class="hero-sticky-container">
+            <!-- Positioned exactly in the center of the viewport -->
+            <div class="hero-postcards-container" id="heroPostcards">
+                <div class="landing-card lc-1"></div>
+                <div class="landing-card lc-2"></div>
+                <div class="landing-card lc-3"></div>
+            </div>
+            
+            <div class="hero-animation-layer">
+                <div class="stamp-logo" id="heroLogo">
+                    <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 20 20
+                                 q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0
+                                 q 10 10 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20
+                                 q -10 10 -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0
+                                 q -10 -10 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20" 
+                              stroke="var(--white)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+                        <rect x="40" y="40" width="160" height="220" stroke="var(--white)" stroke-width="1.5" />
+                        <text x="120" y="95" font-family="'Special Elite', cursive" font-size="44" fill="var(--white)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">Tiny</text>
+                        <text x="120" y="155" font-family="'Special Elite', cursive" font-size="44" fill="var(--white)" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PAPER</text>
+                        <text x="120" y="215" font-family="'Special Elite', cursive" font-size="44" fill="var(--white)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CAFÉ</text>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="hero-content-text" id="heroText" style="opacity: 0; pointer-events: none; transition: opacity 0.5s ease;">
+                <p class="hero-tagline">Bern's Cosy Postcard Café</p>
+                <a href="#reserve" class="btn-primary">Reserve your table &rarr;</a>
+            </div>
+            
+            <div class="scroll-indicator" id="scrollIndicator">
+                <span>Scroll</span>
+                <div class="arrow">&darr;</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. The Experience Section -->
+    <section id="about" class="experience-section">
+        <div class="experience-layout">
+            <div class="experience-text">
+                <h2 class="special-font">Paint · Write · Send</h2>
+                <p>Come in, pick a postcard, and send a little piece of Bern to someone you love. We provide premium Swiss paints, you provide the creativity.</p>
+            </div>
+            
+            <div class="experience-interactive" id="sendAnimationContainer">
+                <div class="postcard-flip-container" id="interactivePostcard" onclick="this.classList.toggle('flipped')">
+                    <div class="postcard-flipper">
+                        <!-- Front Side (Paint) -->
+                        <div class="postcard-face postcard-front-side"></div>
+                        <!-- Back Side (Write/Send) -->
+                        <div class="postcard-face postcard-back-side">
+                            <div class="postcard-handwriting">
+                                Sending a little piece of Bern to you!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mail-slot-container">
+                    <div class="mail-slot-lid"></div>
+                    <div class="mail-slot-opening"></div>
+                </div>
+
+                <div class="send-action-area">
+                    <p class="interactive-hint"><span class="desktop-hint">(Hover to flip)</span><span class="mobile-hint" style="display:none;">(Tap to flip)</span></p>
+                    <button class="btn-primary" onclick="sendPostcard()">Send Postcard</button>
+                </div>
+
+                <div class="success-message" id="sendSuccessMessage">
+                    <h3 class="special-font">Off to its new home! 💌</h3>
+                    <p>Your piece of Bern is on its way.</p>
+                    <button class="btn-secondary" onclick="resetPostcard()">Send another one</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. The Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="menu-wrapper">
+            <div class="menu-card">
+                <h2 class="special-font">Matcha · Coffee · Bites</h2>
+                <p class="menu-subtitle">Homemade drinks and bites to enjoy while you create.</p>
+                
+                <div class="menu-grid">
+                    <div class="menu-column">
+                        <h3 class="menu-category">GREEN MATCHA</h3>
+                        <p class="menu-description">Zeremoniell-grade matcha from Japan, lightly whisked and served pure.</p>
+                        <div class="menu-item"><span>Pure Matcha</span> <span class="dots"></span> <span>5.50</span></div>
+                        
+                        <h3 class="menu-category">TEA</h3>
+                        <div class="menu-item"><span>Sencha Green Tea</span> <span class="dots"></span> <span>4.50</span></div>
+                        <div class="menu-item"><span>Earl Grey</span> <span class="dots"></span> <span>4.50</span></div>
+                        <div class="menu-item"><span>Hibiscus</span> <span class="dots"></span> <span>4.50</span></div>
+                    </div>
+                    <div class="menu-column">
+                        <h3 class="menu-category">COFFEE</h3>
+                        <div class="menu-item"><span>Espresso</span> <span class="dots"></span> <span>3.50</span></div>
+                        <div class="menu-item"><span>Americano</span> <span class="dots"></span> <span>3.90</span></div>
+                        <div class="menu-item"><span>Cappuccino</span> <span class="dots"></span> <span>4.90</span></div>
+                        <div class="menu-item"><span>Latte</span> <span class="dots"></span> <span>4.50</span></div>
+
+                        <h3 class="menu-category">ICED MATCHA</h3>
+                        <div class="menu-item"><span>Iced Matcha Latte</span> <span class="dots"></span> <span>5.50</span></div>
+                        <div class="menu-item"><span>Iced Matcha Lemonade</span> <span class="dots"></span> <span>5.90</span></div>
+                        <div class="menu-item"><span>Iced Matcha Coconut</span> <span class="dots"></span> <span>6.20</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Info banner -->
+    <div class="info-banner">
+        Pop-Up at Lieblings · Gerechtigkeitsgasse 13, Bern · 26 June – 30 September · Tue–Sun 11:00–19:00
+    </div>
+
+    <!-- 5. Booking form -->
+    <section id="reserve" class="booking-section">
+        <h2 class="special-font">Reserve your table</h2>
+
+        <div class="wizard-progress" id="wizardProgress">
+            <div class="progress-step active" data-step="1"></div>
+            <div class="progress-step" data-step="2"></div>
+            <div class="progress-step" data-step="3"></div>
+            <div class="progress-step" data-step="4"></div>
+            <div class="progress-step" data-step="5"></div>
+        </div>
+        
+        <div class="postcard-container">
+            <div class="postcard-flip-inner" id="postcardFlipInner">
+                <!-- Front Side -->
+                <div class="postcard full-postcard postcard-front">
+                    <div class="wizard-content">
+                        <form id="bookingForm">
+                            <!-- STEP 1: TYPE -->
+                            <div class="wizard-step active" id="step1">
+                                <div class="step-header">
+                                    <h3 class="step-title">Select type</h3>
+                                </div>
+                                <div class="type-option" onclick="selectType('Tiny Paper Postcard Experience')">
+                                    <h4>Tiny Paper Postcard Experience</h4>
+                                    <p>Create your own postcard using premium Swiss paints and art supplies. We'll provide the postcard, envelope, postal stamp, and mail it for you in the month of your choice anywhere within Europe.</p>
+                                    <span class="read-more">Read more</span>
+                                </div>
+                                <h4 style="margin: 1.5rem 0 1rem; color: var(--muted-color); font-size: 0.9rem;">Upcoming events</h4>
+                                <div class="type-option" onclick="selectType('Girls Night Event: Sip, Paint, Write and Send Postcards')">
+                                    <h4>Girls Night Event: Sip, Paint, Write and Send Postcards</h4>
+                                    <p>An evening for girls who want to get creative, socialize, and enjoy a glass of wine while painting, writing, and sending postcards.</p>
+                                    <span class="read-more">Read more</span>
+                                </div>
+                                <div style="text-align: center; margin-top: 1.5rem;">
+                                    <a href="#" style="color: var(--primary-color); font-size: 0.95rem;">Cancel a reservation</a>
+                                </div>
+                            </div>
+
+                            <!-- STEP 2: GUESTS -->
+                            <div class="wizard-step" id="step2">
+                                <div class="step-header">
+                                    <h3 class="step-title">How many guests?</h3>
+                                    <button type="button" class="btn-back" onclick="goToStep(1)">&larr; Back</button>
+                                </div>
+                                <div class="guests-container">
+                                    <div class="guests-grid">
+                                        <button type="button" class="guest-btn" onclick="selectGuests(1)">1</button>
+                                        <button type="button" class="guest-btn" onclick="selectGuests(2)">2</button>
+                                        <button type="button" class="guest-btn" onclick="selectGuests(3)">3</button>
+                                        <button type="button" class="guest-btn" onclick="selectGuests(4)">4</button>
+                                    </div>
+                                    <p class="guests-note">More than 4 pers. please contact <a href="mailto:hello@tinypapercafe.com">hello@tinypapercafe.com</a></p>
+                                </div>
+                            </div>
+
+                            <!-- STEP 3: DATE -->
+                            <div class="wizard-step" id="step3">
+                                <div class="step-header">
+                                    <h3 class="step-title">Select Date</h3>
+                                    <button type="button" class="btn-back" onclick="goToStep(2)">&larr; Back</button>
+                                </div>
+                                <div class="date-input-container">
+                                    <input type="date" id="dateInput" class="date-input" min="2026-07-01" onchange="selectDate(this.value)">
+                                </div>
+                            </div>
+
+                            <!-- STEP 4: TIME -->
+                            <div class="wizard-step" id="step4">
+                                <div class="step-header">
+                                    <h3 class="step-title" id="displayDateTitle">Select Time</h3>
+                                    <button type="button" class="btn-back" onclick="goToStep(3)">&larr; Back</button>
+                                </div>
+                                <div class="time-slots" id="timeSlotsContainer">
+                                    <div class="time-slot" onclick="selectTime('11:00 AM')">11:00 AM</div>
+                                    <div class="time-slot" onclick="selectTime('11:15 AM')">11:15 AM</div>
+                                    <div class="time-slot" onclick="selectTime('11:30 AM')">11:30 AM</div>
+                                    <div class="time-slot" onclick="selectTime('11:45 AM')">11:45 AM</div>
+                                    <div class="time-slot" onclick="selectTime('12:00 PM')">12:00 PM</div>
+                                    <div class="time-slot" onclick="selectTime('12:15 PM')">12:15 PM</div>
+                                    <div class="time-slot" onclick="selectTime('12:30 PM')">12:30 PM</div>
+                                    <div class="time-slot" onclick="selectTime('12:45 PM')">12:45 PM</div>
+                                    <div class="time-slot" onclick="selectTime('1:00 PM')">1:00 PM</div>
+                                    <div class="time-slot" onclick="selectTime('1:15 PM')">1:15 PM</div>
+                                    <div class="time-slot" onclick="selectTime('1:30 PM')">1:30 PM</div>
+                                    <div class="time-slot" onclick="selectTime('1:45 PM')">1:45 PM</div>
+                                    <div class="time-slot" onclick="selectTime('2:00 PM')">2:00 PM</div>
+                                    <div class="time-slot" onclick="selectTime('2:15 PM')">2:15 PM</div>
+                                    <div class="time-slot" onclick="selectTime('2:30 PM')">2:30 PM</div>
+                                </div>
+                                <div class="waiting-list-note">
+                                    <span>●</span> Sign up on our waiting list
+                                </div>
+                            </div>
+
+                            <!-- STEP 5: CONFIRM -->
+                            <div class="wizard-step" id="step5">
+                                <div class="step-header">
+                                    <h3 class="step-title">Confirm booking</h3>
+                                    <button type="button" class="btn-back" onclick="goToStep(4)">&larr; Back</button>
+                                </div>
+                                
+                                <div class="summary-box">
+                                    <div class="summary-item">
+                                        <div class="summary-label">Place</div>
+                                        <div class="summary-value">Tiny Paper Café<br><small>Gerechtigkeitsgasse 13, 3011 Bern</small></div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-label">Type</div>
+                                        <div class="summary-value" id="summaryType">Tiny Paper Postcard Experience</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-label">Number of guests</div>
+                                        <div class="summary-value" id="summaryGuests">3 persons</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-label">Date and time</div>
+                                        <div class="summary-value" id="summaryDateTime">05 July 2026 at 1:45 PM</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="options-row">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="birthday"> Birthday
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="specialReq"> Special requirements
+                                    </label>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group" style="margin-bottom:0">
+                                        <input type="text" id="name" name="name" placeholder="Name" required>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom:0">
+                                        <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message" name="message" placeholder="Comment" rows="1"></textarea>
+                                </div>
+
+                                <div class="terms-row">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" required> I agree that the booking can be cancelled up to 24 hours before the reservation
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Receive emails with offers and news from Tiny Paper Café.
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn-next" id="submitBtn">Erfolgt! (Send reservation)</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Back Side (Success) -->
+                <div class="postcard full-postcard postcard-back">
+                    <div class="success-stamp">
+                        <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 20 20
+                                     q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0
+                                     q 10 10 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20
+                                     q -10 10 -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0
+                                     q -10 -10 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20" 
+                                  stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+                            <rect x="40" y="40" width="160" height="220" stroke="currentColor" stroke-width="2" />
+                            <text x="120" y="95" font-family="'Special Elite', cursive" font-size="44" fill="currentColor" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">Tiny</text>
+                            <text x="120" y="155" font-family="'Special Elite', cursive" font-size="44" fill="currentColor" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PAPER</text>
+                            <text x="120" y="215" font-family="'Special Elite', cursive" font-size="44" fill="currentColor" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CAFÉ</text>
+                        </svg>
+                    </div>
+                    <h3 class="special-font">Your table is reserved! ✉️</h3>
+                    <p>See you soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer>
+        <div class="special-font">Tiny Paper Café — Bern 2025</div>
+        <div><a href="mailto:hello@tinypapercafe.com">hello@tinypapercafe.com</a></div>
+        <div><a href="https://instagram.com/tinypapercafe" target="_blank">@tinypapercafe</a></div>
+    </footer>
+
+    <script>
+        function sendPostcard() {
+            const container = document.getElementById('sendAnimationContainer');
+            const postcard = document.getElementById('interactivePostcard');
+            
+            // Revert flip state for the drop animation
+            postcard.classList.remove('flipped');
+            container.classList.add('is-sending');
+            
+            // Show success message
+            setTimeout(() => {
+                container.classList.add('is-sent');
+            }, 1200);
+        }
+
+        function resetPostcard() {
+            const container = document.getElementById('sendAnimationContainer');
+            container.classList.remove('is-sending', 'is-sent');
+        }
+
+        // Parallax effect for the hero cards
+        // Wizard State
+        let currentStep = 1;
+        const state = {
+            type: '',
+            guests: null,
+            date: '',
+            time: ''
+        };
+
+        function updateProgress() {
+            document.querySelectorAll('.progress-step').forEach(el => {
+                const stepNum = parseInt(el.dataset.step);
+                if (stepNum === currentStep) {
+                    el.classList.add('active');
+                    el.classList.remove('completed');
+                } else if (stepNum < currentStep) {
+                    el.classList.remove('active');
+                    el.classList.add('completed');
+                } else {
+                    el.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        function goToStep(step) {
+            document.querySelectorAll('.wizard-step').forEach(el => el.classList.remove('active'));
+            document.getElementById(`step${step}`).classList.add('active');
+            currentStep = step;
+            updateProgress();
+            
+            if (step === 5) {
+                updateSummary();
+            }
+        }
+
+        function selectType(type) {
+            state.type = type;
+            document.querySelectorAll('.type-option').forEach(el => {
+                if(el.querySelector('h4').innerText === type) {
+                    el.classList.add('selected');
+                } else {
+                    el.classList.remove('selected');
+                }
+            });
+            setTimeout(() => goToStep(2), 300);
+        }
+
+        function selectGuests(num) {
+            state.guests = num;
+            document.querySelectorAll('.guest-btn').forEach(el => {
+                if(parseInt(el.innerText) === num) {
+                    el.classList.add('selected');
+                } else {
+                    el.classList.remove('selected');
+                }
+            });
+            setTimeout(() => goToStep(3), 300);
+        }
+
+        function selectDate(date) {
+            if (!date) return;
+            state.date = date;
+            
+            // Format date for title
+            const d = new Date(date);
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            document.getElementById('displayDateTitle').innerText = d.toLocaleDateString('en-GB', options);
+            
+            setTimeout(() => goToStep(4), 300);
+        }
+
+        function selectTime(time) {
+            state.time = time;
+            document.querySelectorAll('.time-slot').forEach(el => {
+                if(el.innerText.replace('\n', ' ') === time) {
+                    el.classList.add('selected');
+                } else {
+                    el.classList.remove('selected');
+                }
+            });
+            setTimeout(() => goToStep(5), 300);
+        }
+
+        function updateSummary() {
+            document.getElementById('summaryType').innerText = state.type || '-';
+            document.getElementById('summaryGuests').innerText = state.guests ? `${state.guests} person${state.guests > 1 ? 's' : ''}` : '-';
+            
+            if (state.date) {
+                const d = new Date(state.date);
+                const options = { day: '2-digit', month: 'long', year: 'numeric' };
+                const dateStr = d.toLocaleDateString('en-GB', options);
+                document.getElementById('summaryDateTime').innerText = `${dateStr} at ${state.time || '-'}`;
+            } else {
+                document.getElementById('summaryDateTime').innerText = '-';
+            }
+        }
+
+        // Add click listener to completed progress steps
+        document.querySelectorAll('.progress-step').forEach(el => {
+            el.addEventListener('click', function() {
+                if (this.classList.contains('completed')) {
+                    goToStep(parseInt(this.dataset.step));
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.cursor = 'not-allowed';
+            submitBtn.disabled = true;
+
+            const formData = {
+                type: state.type,
+                guests: state.guests,
+                date: state.date,
+                time: state.time,
+                name: document.getElementById('name').value,
+                mobile: document.getElementById('mobile').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            fetch('https://your-n8n-webhook-url.com/webhook/tinypapercafe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                triggerSuccessAnimation();
+            })
+            .catch(error => {
+                console.error('Error during submission:', error);
+                // Triggering the success animation anyway for demo purposes
+                triggerSuccessAnimation(); 
+            });
+            
+            function triggerSuccessAnimation() {
+                const inner = document.getElementById('postcardFlipInner');
+                inner.classList.add('flipped');
+                const progress = document.getElementById('wizardProgress');
+                if(progress) progress.style.display = 'none';
+            }
+        });
+
+        // Splash Screen Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('splash-active');
+            setTimeout(() => {
+                document.body.classList.remove('splash-active');
+                const splashScreen = document.getElementById('splashScreen');
+                if(splashScreen) splashScreen.remove();
+            }, 3200);
+        });
+
+        // Scroll Animation Logic for Hero Postcards
+        document.addEventListener('scroll', () => {
+            const heroSection = document.getElementById('heroSection');
+            const heroLogo = document.getElementById('heroLogo');
+            const hc1 = document.querySelector('.lc-1');
+            const hc2 = document.querySelector('.lc-2');
+            const hc3 = document.querySelector('.lc-3');
+            const indicator = document.getElementById('scrollIndicator');
+            
+            if (!heroSection || !hc1) return;
+            
+            const rect = heroSection.getBoundingClientRect();
+            const scrollDist = window.innerHeight; 
+            
+            let progress = (-rect.top) / scrollDist;
+            progress = Math.max(0, Math.min(1, progress));
+            
+            const easeProgress = progress * (2 - progress); // ease-out
+            
+            if (indicator) {
+                indicator.style.opacity = progress > 0.05 ? '0' : '1';
+            }
+
+            // Card 1: Top Left
+            hc1.style.transform = `translate(${ -100 + easeProgress * -100}%, ${ -80 + easeProgress * -100}%) rotate(${-12 - easeProgress * 20}deg) scale(${1 + easeProgress * 0.15})`;
+            
+            // Card 2: Middle Right
+            hc2.style.transform = `translate(${ 10 + easeProgress * 120}%, ${ -60 + easeProgress * -30}%) rotate(${8 + easeProgress * 20}deg) scale(${1 + easeProgress * 0.1})`;
+            
+            // Card 3: Bottom Center
+            hc3.style.transform = `translate(${ -50 + easeProgress * 20}%, ${ -20 + easeProgress * 120}%) rotate(${-4 - easeProgress * 10}deg) scale(${1 + easeProgress * 0.15})`;
+            
+            // Fade out cards towards the end
+            const opacity = 1 - Math.pow(progress, 3);
+            [hc1, hc2, hc3].forEach(c => {
+                c.style.opacity = opacity;
+            });
+            
+            // Logo comes in clearly
+            if(heroLogo) {
+                heroLogo.style.transform = `scale(${0.8 + easeProgress * 0.2})`;
+                heroLogo.style.opacity = 0.2 + easeProgress * 0.8;
+            }
+            
+            // Text and Button appear at the very end
+            const heroText = document.getElementById('heroText');
+            if(heroText) {
+                if (progress > 0.8) {
+                    heroText.style.opacity = '1';
+                    heroText.style.pointerEvents = 'auto';
+                } else {
+                    heroText.style.opacity = '0';
+                    heroText.style.pointerEvents = 'none';
+                }
+            }
+        });
+        
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
