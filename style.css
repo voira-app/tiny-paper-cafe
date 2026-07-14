@@ -1,10 +1,11 @@
 :root {
             --bg-color: #F4EFE0;
-            --primary-color: #6B7A35;
+            --primary-color: #747E3F;
             --text-color: #1A1A1A;
             --white: #FAFAFA;
             --muted-color: #9A9A8A;
-            --footer-bg: #3D4A1E;
+            --footer-bg: #747E3F;
+            --accent-color: #EAC5C5;
         }
 
         html {
@@ -55,33 +56,23 @@
         .nav-links a {
             color: var(--white);
             text-decoration: none;
-            margin-left: 2rem;
+            margin-left: 1.5rem;
             font-size: 1.05rem;
             transition: opacity 0.3s ease;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            color: var(--accent-color);
+            opacity: 1;
         }
 
         /* 2. Hero */
         .hero {
             background-color: var(--primary-color);
-            background-image: 
-                repeating-linear-gradient(
-                    89deg,
-                    rgba(250, 250, 250, 0.04) 0px,
-                    transparent 15px,
-                    rgba(250, 250, 250, 0.02) 35px,
-                    transparent 50px
-                ),
-                repeating-linear-gradient(
-                    91deg,
-                    transparent 0px,
-                    rgba(250, 250, 250, 0.03) 25px,
-                    transparent 40px,
-                    transparent 80px
-                );
+            background-image: url('hero-bg-2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--white);
             height: 200vh;
             position: relative;
@@ -214,8 +205,8 @@
         }
 
         .btn-primary {
-            background-color: var(--bg-color);
-            color: var(--primary-color);
+            background-color: var(--accent-color);
+            color: var(--white);
             padding: 1rem 2.5rem;
             text-decoration: none;
             font-family: 'DM Mono', monospace;
@@ -232,38 +223,100 @@
         .btn-primary:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+            background-color: var(--text-color);
+            color: var(--white);
         }
 
         /* 3. The Experience Section */
         .experience-section {
-            padding: 10rem 2rem;
             background-color: var(--bg-color);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 300vh;
+            position: relative;
         }
 
-        .experience-layout {
+        .experience-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 6rem;
-            max-width: 1100px;
+            overflow: hidden;
             width: 100%;
+            padding: 6rem 2rem 2rem 2rem;
+        }
+
+        .process-grid {
+            display: flex;
+            gap: 4rem;
+            max-width: 1200px;
             margin: 0 auto;
+            align-items: flex-start; /* Aligns titles and images at the top */
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5%;
         }
 
-        .experience-text {
+        .process-col {
             flex: 1;
-            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .experience-text h2 {
+        .process-col h2 {
             font-size: 3.5rem;
             margin-bottom: 2rem;
             color: var(--text-color);
+            text-align: center;
+            position: relative;
+            z-index: 10;
         }
+
+        .process-img {
+            width: 100%;
+            height: auto;
+            max-width: 350px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background-color: var(--white);
+        }
+
+        .send-svg {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .process-desc {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 330px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .brush-stroke {
+            stroke-dasharray: 12000;
+            stroke-dashoffset: 0;
+        }
+
+        .letter-insert {
+            transform: translateY(-250px);
+            opacity: 0;
+        }
+
+        .envelope-flap-front {
+            transform-origin: 175px 0px;
+            transform: scaleY(-1);
+            opacity: 0;
+        }
+
+        .flap-open {
+            opacity: 1;
+        }
+
+        /* Animations replaced by scroll JS */
 
         .experience-text p {
             font-size: 1.3rem;
@@ -271,6 +324,8 @@
             opacity: 0.85;
             line-height: 1.8;
         }
+
+
 
         .experience-interactive {
             position: relative;
@@ -487,23 +542,20 @@
         }
 
         .menu-wrapper {
-            width: 100%;
-            max-width: 1200px;
+            max-width: 950px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
         }
 
         .menu-card {
-            background-color: var(--bg-color);
-            padding: 5rem 4rem;
-            border-radius: 4px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+            background-color: var(--bg-color); /* Changed to beige */
+            padding: 4rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            width: 100%;
-            flex: 1;
-            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .menu-card h2 {
@@ -527,12 +579,16 @@
 
         .menu-column {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4.5rem;
             text-align: left;
         }
 
         .menu-category {
-            font-family: 'DM Mono', monospace;
-            font-size: 1.2rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 1.3rem;
+            font-weight: 400;
             margin-bottom: 1.2rem;
             margin-top: 2.5rem;
             letter-spacing: 1px;
@@ -546,8 +602,29 @@
         .menu-description {
             font-size: 0.95rem;
             color: var(--muted-color);
+            margin-top: -0.5rem;
             margin-bottom: 1.5rem;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-weight: 600; /* Semi-bold */
+        }
+        
+        .addon-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 800; /* Bold */
+        }
+
+        .menu-addon {
+            font-size: 0.95rem;
+            color: var(--muted-color);
+            display: flex;
+            justify-content: space-between;
+            padding-left: 1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600; /* Semi-bold */
         }
 
         .menu-item {
@@ -555,7 +632,8 @@
             align-items: baseline;
             margin-bottom: 0.8rem;
             font-size: 1.1rem;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600; /* Semi-bold */
             transition: all 0.2s ease;
         }
         .menu-item:hover {
@@ -602,6 +680,24 @@
             text-align: center;
         }
 
+        /* BookingBox Styling */
+        .BookingBox {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            padding: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .BookingBox span {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--muted-color);
+        }
         /* Wizard Progress Dots */
         .wizard-progress {
             display: flex;
@@ -1046,6 +1142,114 @@
             color: var(--text-color);
         }
 
+        /* Location Section */
+        .location-section {
+            padding: 8rem 2rem;
+            background-color: var(--bg-color);
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+        }
+
+        .location-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 5rem;
+        }
+
+        .location-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .location-header {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .location-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 1.5rem 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .location-address {
+            margin-bottom: 2.5rem;
+        }
+
+        .address-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700 !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .location-address p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .location-map iframe {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            width: 100%;
+        }
+
+        .location-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .hours-box {
+            width: 100%;
+        }
+
+        .hours-title {
+            font-size: 1.15rem;
+            margin: 0 0 2rem 0;
+            font-weight: 700;
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Slightly reduced gap for a more compact height */
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.15rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 850px) {
+            .location-container {
+                flex-direction: column;
+                gap: 4rem;
+            }
+            .location-right {
+                margin-top: 0;
+            }
+            .location-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+
         /* 6. Footer */
         footer {
             background-color: var(--footer-bg);
@@ -1056,27 +1260,122 @@
             align-items: center;
             font-size: 1.05rem;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 2rem;
+            font-family: 'Montserrat', sans-serif;
         }
-        
+
+        .footer-left, .footer-center, .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-center {
+            justify-content: center;
+        }
+
+        .footer-right {
+            justify-content: flex-end;
+        }
+
+        .separator {
+            opacity: 0.5;
+        }
+
         footer a {
             color: var(--white);
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: all 0.2s ease;
         }
         
         footer a:hover {
-            opacity: 0.8;
-            text-decoration: underline;
+            color: var(--accent-color);
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        @media (max-width: 850px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            .footer-left, .footer-center, .footer-right {
+                justify-content: center;
+            }
+        }
+
+        /* Legal Pages */
+        .legal-content, .legal-content *,
+        .legal-page footer, .legal-page footer * {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        .legal-content {
+            padding: 10rem 2rem 6rem;
+            background-color: var(--bg-color);
+            min-height: calc(100vh - 100px);
+            color: var(--text-color);
+        }
+        
+        .legal-content .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 4rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .legal-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .legal-content p, .legal-content li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .legal-content ul {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+        
+        .placeholder {
+            background-color: #ffe0e0;
+            color: #d32f2f;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .legal-content .container {
+                padding: 2.5rem 1.5rem;
+            }
         }
 
         @media (max-width: 850px) {
             /* NAV */
             nav {
-                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem 1rem;
             }
             .nav-logo {
-                font-size: 1.15rem;
+                font-size: 1.4rem;
             }
             .nav-links a {
                 margin-left: 0.8rem;
@@ -1094,17 +1393,21 @@
 
             /* EXPERIENCE */
             .experience-section {
+                height: auto;
+            }
+            .experience-sticky {
+                position: relative;
+                height: auto;
+                overflow: visible;
                 padding: 5rem 1.5rem;
             }
-            .experience-layout {
+            .process-grid {
                 flex-direction: column;
                 gap: 4rem;
             }
-            .experience-text {
-                text-align: center;
-            }
-            .experience-text h2 {
-                font-size: 2.5rem;
+            .process-col h2 {
+                font-size: 2.8rem;
+                margin-bottom: 1.5rem;
             }
             .experience-content p {
                 font-size: 1.1rem;
@@ -1118,6 +1421,14 @@
             .postcard-flip-container {
                 width: 260px;
                 height: 360px;
+            }
+
+            /* LOCATION */
+            .location-section {
+                padding: 4rem 1.5rem;
+            }
+            .location-container {
+                gap: 3rem;
             }
 
             /* MENU */
@@ -1239,7 +1550,7 @@ body.splash-active {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -1255,8 +1566,10 @@ body.splash-active {
     animation: logoReveal 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.3s;
 }
 
-.splash-logo svg {
+.splash-logo svg,
+.splash-logo img {
     width: 280px;
+    max-width: 80vw;
     height: auto;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
 }
@@ -1293,21 +1606,9 @@ body.splash-active {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: 
-        repeating-linear-gradient(
-            89deg,
-            rgba(250, 250, 250, 0.04) 0px,
-            transparent 15px,
-            rgba(250, 250, 250, 0.02) 35px,
-            transparent 50px
-        ),
-        repeating-linear-gradient(
-            91deg,
-            transparent 0px,
-            rgba(250, 250, 250, 0.03) 25px,
-            transparent 40px,
-            transparent 80px
-        );
+    background-image: url('hero-bg-2.png');
+    background-size: 100% 100%;
+    background-position: center;
 }
 
 .hero-animation-layer {
@@ -1323,11 +1624,16 @@ body.splash-active {
 .stamp-logo {
     position: absolute;
     width: 100%;
-    max-width: 280px;
+    max-width: 420px;
     z-index: 1;
-    opacity: 0.2;
+    opacity: 1;
     transform: scale(0.8);
     margin-top: 150px; /* Moved further down */
+}
+
+.stamp-logo img {
+    width: 100%;
+    height: auto;
 }
 
 .hero-postcards-container {
@@ -1351,33 +1657,30 @@ body.splash-active {
     will-change: transform, opacity;
 }
 
-/* Faux stamp/lines for the cards */
-.landing-card::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 35px;
-    height: 45px;
-    border: 1px dashed var(--muted-color);
-    opacity: 0.3;
-}
-.landing-card::before {
-    content: '';
-    position: absolute;
-    bottom: 40px;
-    right: 30px;
-    width: 80px;
-    height: 1px;
-    background-color: var(--muted-color);
-    opacity: 0.3;
-    box-shadow: 0 -20px 0 var(--muted-color), 0 -40px 0 var(--muted-color);
-}
+/* Removed faux stamp/lines as we are using real images now */
 
 /* Initial stacking on load (matching user sketch positions before scroll) */
-.lc-1 { z-index: 2; transform: translate(-100%, -80%) rotate(-12deg); }
-.lc-2 { z-index: 1; transform: translate(10%, -60%) rotate(8deg); }
-.lc-3 { z-index: 3; transform: translate(-50%, -20%) rotate(-4deg); }
+.lc-1 { 
+    z-index: 2; 
+    transform: translate(-100%, -80%) rotate(-12deg); 
+    background-image: url('postcard_3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.lc-2 { 
+    z-index: 1; 
+    transform: translate(10%, -60%) rotate(8deg); 
+    background-image: url('postcard_2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.lc-3 { 
+    z-index: 3; 
+    transform: translate(-50%, -20%) rotate(-4deg); 
+    background-image: url('postcard_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
 .hero-content-text {
     position: relative;

@@ -6,35 +6,29 @@
     <title>Tiny Paper Café | Bern</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
     <!-- Splash Screen Intro -->
     <div id="splashScreen" class="splash-screen">
         <div class="splash-logo">
-            <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 20 20
-                         q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0
-                         q 10 10 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20
-                         q -10 10 -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0
-                         q -10 -10 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20" 
-                      stroke="var(--primary-color)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
-                <rect x="40" y="40" width="160" height="220" stroke="var(--primary-color)" stroke-width="1.5" />
-                <text x="120" y="95" font-family="'Special Elite', cursive" font-size="44" fill="var(--primary-color)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">Tiny</text>
-                <text x="120" y="155" font-family="'Special Elite', cursive" font-size="44" fill="var(--primary-color)" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PAPER</text>
-                <text x="120" y="215" font-family="'Special Elite', cursive" font-size="44" fill="var(--primary-color)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CAFÉ</text>
-            </svg>
+            <img src="logo_white.png" alt="Tiny Paper Café Logo">
         </div>
     </div>
 
     <!-- 1. Navigation -->
     <nav>
-        <a href="#" class="nav-logo special-font">Tiny Paper Café</a>
+        <a href="index.html" class="nav-logo special-font">Tiny Paper Café</a>
         <div class="nav-links">
-            <a href="#about">About</a>
+            <a href="about.html">About</a>
             <a href="#reserve">Reserve</a>
+            <a href="https://instagram.com/tinypapercafe" target="_blank" class="nav-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--accent-color)" style="vertical-align: middle; margin-top: -3px;">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+            </a>
         </div>
     </nav>
 
@@ -50,18 +44,7 @@
             
             <div class="hero-animation-layer">
                 <div class="stamp-logo" id="heroLogo">
-                    <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 20 20
-                                 q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0
-                                 q 10 10 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20
-                                 q -10 10 -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0
-                                 q -10 -10 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20" 
-                              stroke="var(--white)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
-                        <rect x="40" y="40" width="160" height="220" stroke="var(--white)" stroke-width="1.5" />
-                        <text x="120" y="95" font-family="'Special Elite', cursive" font-size="44" fill="var(--white)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">Tiny</text>
-                        <text x="120" y="155" font-family="'Special Elite', cursive" font-size="44" fill="var(--white)" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PAPER</text>
-                        <text x="120" y="215" font-family="'Special Elite', cursive" font-size="44" fill="var(--white)" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CAFÉ</text>
-                    </svg>
+                    <img src="logo_white.png" alt="Tiny Paper Café Logo">
                 </div>
             </div>
             
@@ -79,40 +62,64 @@
 
     <!-- 3. The Experience Section -->
     <section id="about" class="experience-section">
-        <div class="experience-layout">
-            <div class="experience-text">
-                <h2 class="special-font">Paint · Write · Send</h2>
-                <p>Come in, pick a postcard, and send a little piece of Bern to someone you love. We provide premium Swiss paints, you provide the creativity.</p>
-            </div>
-            
-            <div class="experience-interactive" id="sendAnimationContainer">
-                <div class="postcard-flip-container" id="interactivePostcard" onclick="this.classList.toggle('flipped')">
-                    <div class="postcard-flipper">
-                        <!-- Front Side (Paint) -->
-                        <div class="postcard-face postcard-front-side"></div>
-                        <!-- Back Side (Write/Send) -->
-                        <div class="postcard-face postcard-back-side">
-                            <div class="postcard-handwriting">
-                                Sending a little piece of Bern to you!
-                            </div>
-                        </div>
+        <div class="experience-sticky">
+            <div class="process-grid">
+                <!-- Paint -->
+                <div class="process-col">
+                    <h2 class="special-font">Paint</h2>
+                    <svg class="process-img paint-svg" viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="1400" height="1000" fill="var(--white)" />
+                        <image href="IMG_8361.jpg" width="1400" height="1000" preserveAspectRatio="xMidYMid slice" />
+                        <!-- Brush stroke placed OVER the image to hide it, then erases itself to reveal it -->
+                        <path class="brush-stroke" fill="none" stroke="var(--white)" stroke-width="480" stroke-linecap="round" stroke-linejoin="round"
+                              d="M -120,120 
+                                 C 600,240 800,-40 1520,200 
+                                 C 800,400 400,240 -120,440 
+                                 C 600,640 800,360 1520,600 
+                                 C 800,800 400,600 -120,840 
+                                 C 600,1040 800,760 1520,1000 
+                                 C 800,1200 400,1000 -120,1240" />
+                    </svg>
+                    <p class="process-desc">Pick a postcard and create your unique design using paint &amp; other art supplies. Let it dry. Paint another, or enjoy a refreshing drink while you wait.</p>
+                </div>
+                <!-- Write -->
+                <div class="process-col">
+                    <h2 class="special-font">Write</h2>
+                    <div class="process-img" style="position: relative; aspect-ratio: 350 / 250; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="Postcard with logo.jpg" alt="Write Postcard" style="position: absolute; height: 140%; width: 140%; object-fit: contain; transform: rotate(-90deg);" />
                     </div>
+                    <p class="process-desc">Write a lovely message to someone special or to your future self. Choose an envelope and write the recipient’s address.</p>
                 </div>
-                
-                <div class="mail-slot-container">
-                    <div class="mail-slot-lid"></div>
-                    <div class="mail-slot-opening"></div>
-                </div>
+                <!-- Send -->
+                <div class="process-col">
+                    <h2 class="special-font" style="position: relative; z-index: 10;">Send</h2>
+                    <svg class="process-img send-svg" viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+                        <!-- Background -->
+                        <rect width="350" height="250" fill="var(--white)" />
+                        
+                        <!-- Flap Open (Back layer) -->
+                        <polygon class="flap-open" points="0,0 175,-135 350,0" fill="var(--white)" stroke="#BB9B2C" stroke-width="6" stroke-linejoin="round" />
+                        
+                        <!-- Postcard sliding in -->
+                        <g class="letter-insert">
+                            <g transform="translate(0, 250) rotate(-90)">
+                                <image href="Postcard with logo.jpg" width="250" height="350" preserveAspectRatio="xMidYMid slice" />
+                            </g>
+                        </g>
 
-                <div class="send-action-area">
-                    <p class="interactive-hint"><span class="desktop-hint">(Hover to flip)</span><span class="mobile-hint" style="display:none;">(Tap to flip)</span></p>
-                    <button class="btn-primary" onclick="sendPostcard()">Send Postcard</button>
-                </div>
+                        <!-- Envelope Front -->
+                        <g class="envelope-front">
+                            <polygon points="0,0 175,125 0,250" fill="var(--white)" stroke="#BB9B2C" stroke-width="6" stroke-linejoin="round" />
+                            <polygon points="350,0 175,125 350,250" fill="var(--white)" stroke="#BB9B2C" stroke-width="6" stroke-linejoin="round" />
+                            <polygon points="0,250 175,115 350,250" fill="var(--white)" stroke="#BB9B2C" stroke-width="6" stroke-linejoin="round" />
+                        </g>
 
-                <div class="success-message" id="sendSuccessMessage">
-                    <h3 class="special-font">Off to its new home! 💌</h3>
-                    <p>Your piece of Bern is on its way.</p>
-                    <button class="btn-secondary" onclick="resetPostcard()">Send another one</button>
+                        <!-- Flap Closed (Front layer) -->
+                        <g class="envelope-flap-front">
+                            <polygon points="0,0 175,135 350,0" fill="var(--white)" stroke="#BB9B2C" stroke-width="6" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                    <p class="process-desc">Get your postage stamp from the staff, then place the envelope in the mailing shelf for your chosen month, or in the surprise delivery, if you’d like it sent unexpectedly.</p>
                 </div>
             </div>
         </div>
@@ -122,230 +129,164 @@
     <section id="menu" class="menu-section">
         <div class="menu-wrapper">
             <div class="menu-card">
-                <h2 class="special-font">Matcha · Coffee · Bites</h2>
-                <p class="menu-subtitle">Homemade drinks and bites to enjoy while you create.</p>
+                <h2 class="special-font">Menu</h2>
+                <p class="menu-subtitle">Drinks, bites, and everything you need to create.</p>
                 
                 <div class="menu-grid">
+                    <!-- Column 1 -->
                     <div class="menu-column">
-                        <h3 class="menu-category">GREEN MATCHA</h3>
-                        <p class="menu-description">Zeremoniell-grade matcha from Japan, lightly whisked and served pure.</p>
-                        <div class="menu-item"><span>Pure Matcha</span> <span class="dots"></span> <span>5.50</span></div>
-                        
-                        <h3 class="menu-category">TEA</h3>
-                        <div class="menu-item"><span>Sencha Green Tea</span> <span class="dots"></span> <span>4.50</span></div>
-                        <div class="menu-item"><span>Earl Grey</span> <span class="dots"></span> <span>4.50</span></div>
-                        <div class="menu-item"><span>Hibiscus</span> <span class="dots"></span> <span>4.50</span></div>
-                    </div>
-                    <div class="menu-column">
-                        <h3 class="menu-category">COFFEE</h3>
-                        <div class="menu-item"><span>Espresso</span> <span class="dots"></span> <span>3.50</span></div>
-                        <div class="menu-item"><span>Americano</span> <span class="dots"></span> <span>3.90</span></div>
-                        <div class="menu-item"><span>Cappuccino</span> <span class="dots"></span> <span>4.90</span></div>
-                        <div class="menu-item"><span>Latte</span> <span class="dots"></span> <span>4.50</span></div>
+                        <div class="menu-group">
+                            <h3 class="menu-category">PAINT A POSTCARD</h3>
+                            <div class="menu-item"><span>Experience</span> <span class="dots"></span> <span>14.90</span></div>
+                            <p class="menu-description">Including a postcard of choice, premium Swiss paints, art supplies, envelope, postal stamp, preparation and shipping in your desired month within Europe.</p>
+                            
+                            <h4 class="addon-title">POSTCARD ADD ON</h4>
+                            <div class="menu-addon"><span>+ Extra Postcard</span> <span>6.50</span></div>
+                            <div class="menu-addon"><span>+ Polaroid Picture</span> <span>3.00</span></div>
+                            <div class="menu-addon"><span>+ International Shipping</span> <span>3.00</span></div>
+                        </div>
 
-                        <h3 class="menu-category">ICED MATCHA</h3>
-                        <div class="menu-item"><span>Iced Matcha Latte</span> <span class="dots"></span> <span>5.50</span></div>
-                        <div class="menu-item"><span>Iced Matcha Lemonade</span> <span class="dots"></span> <span>5.90</span></div>
-                        <div class="menu-item"><span>Iced Matcha Coconut</span> <span class="dots"></span> <span>6.20</span></div>
+                        <div class="menu-group">
+                            <h3 class="menu-category">COFFEE</h3>
+                            <div class="menu-item"><span>Espresso</span> <span class="dots"></span> <span>4.00</span></div>
+                            <div class="menu-item"><span>Americano</span> <span class="dots"></span> <span>5.00</span></div>
+                            <div class="menu-item"><span>Cappuccino</span> <span class="dots"></span> <span>5.80</span></div>
+                            <div class="menu-item"><span>Iced Latte</span> <span class="dots"></span> <span>6.00</span></div>
+                            
+                            <h4 class="addon-title" style="margin-top: 1rem;">DRINK ADD ON</h4>
+                            <div class="menu-addon"><span>+ Espresso Shot</span> <span>1.00</span></div>
+                            <div class="menu-addon"><span>+ Oat milk</span> <span>0.50</span></div>
+                            <div class="menu-addon"><span>+ Vanilla Syrup</span> <span>0.50</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="menu-column">
+                        <div class="menu-group">
+                            <h3 class="menu-category">ICED MATCHA</h3>
+                            <div class="menu-item"><span>Matcha Latte</span> <span class="dots"></span> <span>7.00</span></div>
+                            <div class="menu-item"><span>Vanilla Matcha Latte</span> <span class="dots"></span> <span>7.50</span></div>
+                            <div class="menu-item"><span>Mango Matcha Latte</span> <span class="dots"></span> <span>8.00</span></div>
+                        </div>
+                        
+                        <div class="menu-group">
+                            <h3 class="menu-category">ICED SPECIALS</h3>
+                            <div class="menu-item"><span>Iced Chai Latte</span> <span class="dots"></span> <span>7.00</span></div>
+                            <div class="menu-item"><span>Homemade Iced Tea</span> <span class="dots"></span> <span>6.80</span></div>
+                            <div class="menu-item"><span>Passionfruit Soda</span> <span class="dots"></span> <span>6.80</span></div>
+                        </div>
+
+                        <div class="menu-group">
+                            <h3 class="menu-category">CLASSICS</h3>
+                            <div class="menu-item"><span>Tea | Various flavors</span> <span class="dots"></span> <span>5.00</span></div>
+                            <div class="menu-item"><span>Sparkling Water</span> <span class="dots"></span> <span>5.00</span></div>
+                            <div class="menu-item"><span>Cola/Cola Zero</span> <span class="dots"></span> <span>5.50</span></div>
+                        </div>
+
+                        <div class="menu-group">
+                            <h3 class="menu-category">WINE & BEER</h3>
+                            <div class="menu-item"><span>White Wine</span> <span class="dots"></span> <span>8.00</span></div>
+                            <div class="menu-item"><span>Red Wine</span> <span class="dots"></span> <span>8.00</span></div>
+                            <div class="menu-item"><span>Rosé Wine</span> <span class="dots"></span> <span>8.00</span></div>
+                            <div class="menu-item"><span>Beer | Bärner Müntschi</span> <span class="dots"></span> <span>6.50</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Info banner -->
-    <div class="info-banner">
-        Pop-Up at Lieblings · Gerechtigkeitsgasse 13, Bern · 26 June – 30 September · Tue–Sun 11:00–19:00
-    </div>
 
     <!-- 5. Booking form -->
     <section id="reserve" class="booking-section">
         <h2 class="special-font">Reserve your table</h2>
 
-        <div class="wizard-progress" id="wizardProgress">
-            <div class="progress-step active" data-step="1"></div>
-            <div class="progress-step" data-step="2"></div>
-            <div class="progress-step" data-step="3"></div>
-            <div class="progress-step" data-step="4"></div>
-            <div class="progress-step" data-step="5"></div>
+        <div class="BookingBox" data-place="18138" data-lang="en">
+            <span>In cooperation with <a href="https://easytable.com/" target="_blank" title="Restaurant reservation and booking system">easyTable.com</a></span>
         </div>
-        
-        <div class="postcard-container">
-            <div class="postcard-flip-inner" id="postcardFlipInner">
-                <!-- Front Side -->
-                <div class="postcard full-postcard postcard-front">
-                    <div class="wizard-content">
-                        <form id="bookingForm">
-                            <!-- STEP 1: TYPE -->
-                            <div class="wizard-step active" id="step1">
-                                <div class="step-header">
-                                    <h3 class="step-title">Select type</h3>
-                                </div>
-                                <div class="type-option" onclick="selectType('Tiny Paper Postcard Experience')">
-                                    <h4>Tiny Paper Postcard Experience</h4>
-                                    <p>Create your own postcard using premium Swiss paints and art supplies. We'll provide the postcard, envelope, postal stamp, and mail it for you in the month of your choice anywhere within Europe.</p>
-                                    <span class="read-more">Read more</span>
-                                </div>
-                                <h4 style="margin: 1.5rem 0 1rem; color: var(--muted-color); font-size: 0.9rem;">Upcoming events</h4>
-                                <div class="type-option" onclick="selectType('Girls Night Event: Sip, Paint, Write and Send Postcards')">
-                                    <h4>Girls Night Event: Sip, Paint, Write and Send Postcards</h4>
-                                    <p>An evening for girls who want to get creative, socialize, and enjoy a glass of wine while painting, writing, and sending postcards.</p>
-                                    <span class="read-more">Read more</span>
-                                </div>
-                                <div style="text-align: center; margin-top: 1.5rem;">
-                                    <a href="#" style="color: var(--primary-color); font-size: 0.95rem;">Cancel a reservation</a>
-                                </div>
-                            </div>
+    </section>
 
-                            <!-- STEP 2: GUESTS -->
-                            <div class="wizard-step" id="step2">
-                                <div class="step-header">
-                                    <h3 class="step-title">How many guests?</h3>
-                                    <button type="button" class="btn-back" onclick="goToStep(1)">&larr; Back</button>
-                                </div>
-                                <div class="guests-container">
-                                    <div class="guests-grid">
-                                        <button type="button" class="guest-btn" onclick="selectGuests(1)">1</button>
-                                        <button type="button" class="guest-btn" onclick="selectGuests(2)">2</button>
-                                        <button type="button" class="guest-btn" onclick="selectGuests(3)">3</button>
-                                        <button type="button" class="guest-btn" onclick="selectGuests(4)">4</button>
-                                    </div>
-                                    <p class="guests-note">More than 4 pers. please contact <a href="mailto:hello@tinypapercafe.com">hello@tinypapercafe.com</a></p>
-                                </div>
-                            </div>
-
-                            <!-- STEP 3: DATE -->
-                            <div class="wizard-step" id="step3">
-                                <div class="step-header">
-                                    <h3 class="step-title">Select Date</h3>
-                                    <button type="button" class="btn-back" onclick="goToStep(2)">&larr; Back</button>
-                                </div>
-                                <div class="date-input-container">
-                                    <input type="date" id="dateInput" class="date-input" min="2026-07-01" onchange="selectDate(this.value)">
-                                </div>
-                            </div>
-
-                            <!-- STEP 4: TIME -->
-                            <div class="wizard-step" id="step4">
-                                <div class="step-header">
-                                    <h3 class="step-title" id="displayDateTitle">Select Time</h3>
-                                    <button type="button" class="btn-back" onclick="goToStep(3)">&larr; Back</button>
-                                </div>
-                                <div class="time-slots" id="timeSlotsContainer">
-                                    <div class="time-slot" onclick="selectTime('11:00 AM')">11:00 AM</div>
-                                    <div class="time-slot" onclick="selectTime('11:15 AM')">11:15 AM</div>
-                                    <div class="time-slot" onclick="selectTime('11:30 AM')">11:30 AM</div>
-                                    <div class="time-slot" onclick="selectTime('11:45 AM')">11:45 AM</div>
-                                    <div class="time-slot" onclick="selectTime('12:00 PM')">12:00 PM</div>
-                                    <div class="time-slot" onclick="selectTime('12:15 PM')">12:15 PM</div>
-                                    <div class="time-slot" onclick="selectTime('12:30 PM')">12:30 PM</div>
-                                    <div class="time-slot" onclick="selectTime('12:45 PM')">12:45 PM</div>
-                                    <div class="time-slot" onclick="selectTime('1:00 PM')">1:00 PM</div>
-                                    <div class="time-slot" onclick="selectTime('1:15 PM')">1:15 PM</div>
-                                    <div class="time-slot" onclick="selectTime('1:30 PM')">1:30 PM</div>
-                                    <div class="time-slot" onclick="selectTime('1:45 PM')">1:45 PM</div>
-                                    <div class="time-slot" onclick="selectTime('2:00 PM')">2:00 PM</div>
-                                    <div class="time-slot" onclick="selectTime('2:15 PM')">2:15 PM</div>
-                                    <div class="time-slot" onclick="selectTime('2:30 PM')">2:30 PM</div>
-                                </div>
-                                <div class="waiting-list-note">
-                                    <span>●</span> Sign up on our waiting list
-                                </div>
-                            </div>
-
-                            <!-- STEP 5: CONFIRM -->
-                            <div class="wizard-step" id="step5">
-                                <div class="step-header">
-                                    <h3 class="step-title">Confirm booking</h3>
-                                    <button type="button" class="btn-back" onclick="goToStep(4)">&larr; Back</button>
-                                </div>
-                                
-                                <div class="summary-box">
-                                    <div class="summary-item">
-                                        <div class="summary-label">Place</div>
-                                        <div class="summary-value">Tiny Paper Café<br><small>Gerechtigkeitsgasse 13, 3011 Bern</small></div>
-                                    </div>
-                                    <div class="summary-item">
-                                        <div class="summary-label">Type</div>
-                                        <div class="summary-value" id="summaryType">Tiny Paper Postcard Experience</div>
-                                    </div>
-                                    <div class="summary-item">
-                                        <div class="summary-label">Number of guests</div>
-                                        <div class="summary-value" id="summaryGuests">3 persons</div>
-                                    </div>
-                                    <div class="summary-item">
-                                        <div class="summary-label">Date and time</div>
-                                        <div class="summary-value" id="summaryDateTime">05 July 2026 at 1:45 PM</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="options-row">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="birthday"> Birthday
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="specialReq"> Special requirements
-                                    </label>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group" style="margin-bottom:0">
-                                        <input type="text" id="name" name="name" placeholder="Name" required>
-                                    </div>
-                                    <div class="form-group" style="margin-bottom:0">
-                                        <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="email" name="email" placeholder="E-mail" required>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="message" name="message" placeholder="Comment" rows="1"></textarea>
-                                </div>
-
-                                <div class="terms-row">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" required> I agree that the booking can be cancelled up to 24 hours before the reservation
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox"> Receive emails with offers and news from Tiny Paper Café.
-                                    </label>
-                                </div>
-                                
-                                <button type="submit" class="btn-next" id="submitBtn">Erfolgt! (Send reservation)</button>
-                            </div>
-                        </form>
-                    </div>
+    <!-- 6. Location & Hours Section -->
+    <section id="location" class="location-section">
+        <div class="location-header">
+            <h2>Where to find us</h2>
+        </div>
+        <div class="location-container">
+            <!-- Left Column: Address and Map -->
+            <div class="location-left">
+                <div class="location-address">
+                    <p class="address-title">Pop-Up at Lieblings</p>
+                    <p>Gerechtigkeitsgasse 13<br>3011 Bern</p>
                 </div>
-
-                <!-- Back Side (Success) -->
-                <div class="postcard full-postcard postcard-back">
-                    <div class="success-stamp">
-                        <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 20 20
-                                     q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0
-                                     q 10 10 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20 t 0 20
-                                     q -10 10 -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0 t -20 0
-                                     q -10 -10 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20 t 0 -20" 
-                                  stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
-                            <rect x="40" y="40" width="160" height="220" stroke="currentColor" stroke-width="2" />
-                            <text x="120" y="95" font-family="'Special Elite', cursive" font-size="44" fill="currentColor" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">Tiny</text>
-                            <text x="120" y="155" font-family="'Special Elite', cursive" font-size="44" fill="currentColor" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PAPER</text>
-                            <text x="120" y="215" font-family="'Special Elite', cursive" font-size="44" fill="currentColor" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CAFÉ</text>
-                        </svg>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.957640245642!2d7.452661576767664!3d46.94843077114167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39c43d8b1399%3A0xcb1b6ed200a06bd2!2sGerechtigkeitsgasse%2013%2C%203011%20Bern%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1715000000000!5m2!1sen!2sch" 
+                        width="100%" 
+                        height="320" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- Right Column: Opening Hours -->
+            <div class="location-right">
+                <div class="hours-box">
+                    <h3 class="hours-title">Opening Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-row">
+                            <span class="day">Monday</span>
+                            <span class="time">Closed</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Tuesday</span>
+                            <span class="time">11:00–19:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Wednesday</span>
+                            <span class="time">11:00–19:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Thursday</span>
+                            <span class="time">11:00–19:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Friday</span>
+                            <span class="time">11:00–19:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Saturday</span>
+                            <span class="time">11:00–17:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Sunday</span>
+                            <span class="time">11:00–17:00</span>
+                        </div>
                     </div>
-                    <h3 class="special-font">Your table is reserved! ✉️</h3>
-                    <p>See you soon.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Footer -->
+    <!-- 7. Footer -->
     <footer>
-        <div class="special-font">Tiny Paper Café — Bern 2025</div>
-        <div><a href="mailto:hello@tinypapercafe.com">hello@tinypapercafe.com</a></div>
-        <div><a href="https://instagram.com/tinypapercafe" target="_blank">@tinypapercafe</a></div>
+        <div class="footer-left">
+            <span class="special-font">Tiny Paper Café — Bern 2026</span>
+        </div>
+        <div class="footer-center">
+            <a href="mailto:hello@tinypapercafe.com">hello@tinypapercafe.com</a>
+            <span class="separator">·</span>
+            <a href="https://instagram.com/tinypapercafe" target="_blank">@tinypapercafe</a>
+        </div>
+        <div class="footer-right">
+            <a href="impressum.html">Impressum</a>
+            <span class="separator">·</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span class="separator">·</span>
+            <a href="reservierungsbedingungen.html">Reservierung</a>
+        </div>
     </footer>
 
     <script>
@@ -369,156 +310,7 @@
         }
 
         // Parallax effect for the hero cards
-        // Wizard State
-        let currentStep = 1;
-        const state = {
-            type: '',
-            guests: null,
-            date: '',
-            time: ''
-        };
-
-        function updateProgress() {
-            document.querySelectorAll('.progress-step').forEach(el => {
-                const stepNum = parseInt(el.dataset.step);
-                if (stepNum === currentStep) {
-                    el.classList.add('active');
-                    el.classList.remove('completed');
-                } else if (stepNum < currentStep) {
-                    el.classList.remove('active');
-                    el.classList.add('completed');
-                } else {
-                    el.classList.remove('active', 'completed');
-                }
-            });
-        }
-
-        function goToStep(step) {
-            document.querySelectorAll('.wizard-step').forEach(el => el.classList.remove('active'));
-            document.getElementById(`step${step}`).classList.add('active');
-            currentStep = step;
-            updateProgress();
-            
-            if (step === 5) {
-                updateSummary();
-            }
-        }
-
-        function selectType(type) {
-            state.type = type;
-            document.querySelectorAll('.type-option').forEach(el => {
-                if(el.querySelector('h4').innerText === type) {
-                    el.classList.add('selected');
-                } else {
-                    el.classList.remove('selected');
-                }
-            });
-            setTimeout(() => goToStep(2), 300);
-        }
-
-        function selectGuests(num) {
-            state.guests = num;
-            document.querySelectorAll('.guest-btn').forEach(el => {
-                if(parseInt(el.innerText) === num) {
-                    el.classList.add('selected');
-                } else {
-                    el.classList.remove('selected');
-                }
-            });
-            setTimeout(() => goToStep(3), 300);
-        }
-
-        function selectDate(date) {
-            if (!date) return;
-            state.date = date;
-            
-            // Format date for title
-            const d = new Date(date);
-            const options = { day: 'numeric', month: 'long', year: 'numeric' };
-            document.getElementById('displayDateTitle').innerText = d.toLocaleDateString('en-GB', options);
-            
-            setTimeout(() => goToStep(4), 300);
-        }
-
-        function selectTime(time) {
-            state.time = time;
-            document.querySelectorAll('.time-slot').forEach(el => {
-                if(el.innerText.replace('\n', ' ') === time) {
-                    el.classList.add('selected');
-                } else {
-                    el.classList.remove('selected');
-                }
-            });
-            setTimeout(() => goToStep(5), 300);
-        }
-
-        function updateSummary() {
-            document.getElementById('summaryType').innerText = state.type || '-';
-            document.getElementById('summaryGuests').innerText = state.guests ? `${state.guests} person${state.guests > 1 ? 's' : ''}` : '-';
-            
-            if (state.date) {
-                const d = new Date(state.date);
-                const options = { day: '2-digit', month: 'long', year: 'numeric' };
-                const dateStr = d.toLocaleDateString('en-GB', options);
-                document.getElementById('summaryDateTime').innerText = `${dateStr} at ${state.time || '-'}`;
-            } else {
-                document.getElementById('summaryDateTime').innerText = '-';
-            }
-        }
-
-        // Add click listener to completed progress steps
-        document.querySelectorAll('.progress-step').forEach(el => {
-            el.addEventListener('click', function() {
-                if (this.classList.contains('completed')) {
-                    goToStep(parseInt(this.dataset.step));
-                }
-            });
-        });
-
-        // Form submission handling
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.innerHTML = 'Sending...';
-            submitBtn.style.opacity = '0.7';
-            submitBtn.style.cursor = 'not-allowed';
-            submitBtn.disabled = true;
-
-            const formData = {
-                type: state.type,
-                guests: state.guests,
-                date: state.date,
-                time: state.time,
-                name: document.getElementById('name').value,
-                mobile: document.getElementById('mobile').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            fetch('https://your-n8n-webhook-url.com/webhook/tinypapercafe', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                triggerSuccessAnimation();
-            })
-            .catch(error => {
-                console.error('Error during submission:', error);
-                // Triggering the success animation anyway for demo purposes
-                triggerSuccessAnimation(); 
-            });
-            
-            function triggerSuccessAnimation() {
-                const inner = document.getElementById('postcardFlipInner');
-                inner.classList.add('flipped');
-                const progress = document.getElementById('wizardProgress');
-                if(progress) progress.style.display = 'none';
-            }
-        });
+        // Removed old wizard state and form submission handling
 
         // Splash Screen Logic
         document.addEventListener('DOMContentLoaded', () => {
@@ -578,7 +370,7 @@
                 // Logo comes in clearly
                 if(heroLogo) {
                     heroLogo.style.transform = `scale(${0.8 + easeProgress * 0.2})`;
-                    heroLogo.style.opacity = 0.2 + easeProgress * 0.8;
+                    heroLogo.style.opacity = 1;
                 }
                 
                 // Text and Button appear at the very end
@@ -605,6 +397,97 @@
             // Initial call
             setTimeout(updateScrollAnimation, 100);
         });
+
+        // Trigger paint animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const paintObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('start-paint');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const paintSvgs = document.querySelectorAll('.paint-svg');
+            paintSvgs.forEach(svg => paintObserver.observe(svg));
+            
+            const experienceSection = document.querySelector('.experience-section');
+            const paintBrush = document.querySelector('.brush-stroke');
+            const sendSvg = document.querySelector('.send-svg');
+            const letter = document.querySelector('.letter-insert');
+            const flapFront = document.querySelector('.envelope-flap-front');
+            const flapOpen = document.querySelector('.flap-open');
+
+            if (experienceSection && paintBrush && sendSvg && letter && flapFront && flapOpen) {
+                window.addEventListener('scroll', () => {
+                    const rect = experienceSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    // The section is tall (e.g. 300vh). We start animating when it pins (top <= 0)
+                    // and finish when it's about to unpin (bottom <= windowHeight).
+                    // This gives a nice scroll range where the section is stuck.
+                    const scrollableDistance = rect.height - windowHeight;
+                    let progress = 0;
+                    
+                    if (scrollableDistance > 0) {
+                        progress = -rect.top / scrollableDistance;
+                    }
+                    progress = Math.max(0, Math.min(1, progress));
+                    
+                    // 1. Paint Animation (0.0 to 0.4)
+                    let paintProgress = Math.min(1, progress / 0.4);
+                    // stroke-dashoffset from 0 to -12000
+                    paintBrush.style.strokeDashoffset = -(12000 * paintProgress);
+                    
+                    // 2. Send Animation (0.5 to 1.0)
+                    // Map progress from 0.5 to 1.0 into a 0.0 to 1.0 range for the send animation
+                    let sendProgress = 0;
+                    if (progress > 0.5) {
+                        sendProgress = Math.min(1, (progress - 0.5) / 0.5);
+                    }
+                    
+                    // Fade up envelope (0.0 to 0.2 of sendProgress)
+                    const fadeProgress = Math.min(1, sendProgress / 0.2);
+                    sendSvg.style.opacity = fadeProgress;
+                    sendSvg.style.transform = `translateY(${40 * (1 - fadeProgress)}px)`;
+                    
+                    // Postcard slide (0.2 to 0.8 of sendProgress)
+                    let slideProgress = 0;
+                    if (sendProgress > 0.2) slideProgress = Math.min(1, (sendProgress - 0.2) / 0.6);
+                    const translateY = -250 + (250 * slideProgress);
+                    letter.style.transform = `translateY(${translateY}px)`;
+                    letter.style.opacity = slideProgress > 0 ? 1 : 0;
+                    
+                    // Flap close (0.8 to 1.0 of sendProgress)
+                    let flapProgress = 0;
+                    if (sendProgress > 0.8) flapProgress = Math.min(1, (sendProgress - 0.8) / 0.2);
+                    
+                    if (flapProgress > 0) {
+                        flapOpen.style.opacity = 0;
+                        flapFront.style.opacity = 1;
+                        const scaleY = -1 + (2 * flapProgress);
+                        flapFront.style.transform = `scaleY(${scaleY})`;
+                    } else {
+                        flapOpen.style.opacity = 1;
+                        flapFront.style.opacity = 0;
+                        flapFront.style.transform = `scaleY(-1)`;
+                    }
+                });
+                
+                // Trigger once on load
+                window.dispatchEvent(new Event('scroll'));
+            }
+        });
     </script>
+    <!-- easyTableBooking Script -->
+    <script type="text/javascript">
+    (function() { 
+        var st=document.createElement('script'); st.type='text/javascript'; st.async=true; 
+        st.src='https://book.easytable.com/book/widget/v3/book.js'; 
+        var sc=document.getElementsByTagName('script')[0]; 
+        sc.parentNode.insertBefore(st, sc); 
+    })();
+    </script>
+    <noscript>Your browser does not support JavaScript!</noscript>
 </body>
 </html>
