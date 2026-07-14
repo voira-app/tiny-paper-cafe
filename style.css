@@ -149,19 +149,7 @@
             box-shadow: 0 -15px 0 var(--muted-color), 0 -30px 0 var(--muted-color);
         }
 
-        #heroLogo {
-            position: absolute;
-            z-index: 3;
-            transition: transform 0.1s, opacity 0.1s;
-            width: 100%;
-            max-width: 250px;
-        }
 
-        #heroLogo svg {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
-        }
 
         .hero-content-text {
             position: relative;
@@ -1383,8 +1371,8 @@
             }
 
             /* HERO */
-            #heroLogo {
-                max-width: 200px;
+            .stamp-logo {
+                max-width: 250px;
                 margin-top: 100px;
             }
             .hero-content-text {
@@ -1719,7 +1707,5 @@ body.splash-active {
         width: 180px;
         height: 250px;
     }
-    .lc-1 { transform: translate(-90%, -70%) rotate(-12deg); }
-    .lc-2 { transform: translate(10%, -50%) rotate(8deg); }
-    .lc-3 { transform: translate(-40%, -10%) rotate(-4deg); }
+
 }

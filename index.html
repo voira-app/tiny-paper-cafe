@@ -341,7 +341,7 @@
                 }
                 
                 const rect = heroSection.getBoundingClientRect();
-                const scrollDist = window.innerHeight; 
+                const scrollDist = window.innerHeight * 1.5; 
                 
                 let progress = (-rect.top) / scrollDist;
                 progress = Math.max(0, Math.min(1, progress));
@@ -423,28 +423,43 @@
                     const rect = experienceSection.getBoundingClientRect();
                     const windowHeight = window.innerHeight;
                     
-                    // The section is tall (e.g. 300vh). We start animating when it pins (top <= 0)
-                    // and finish when it's about to unpin (bottom <= windowHeight).
-                    // This gives a nice scroll range where the section is stuck.
-                    const scrollableDistance = rect.height - windowHeight;
-                    let progress = 0;
-                    
-                    if (scrollableDistance > 0) {
-                        progress = -rect.top / scrollableDistance;
-                    }
-                    progress = Math.max(0, Math.min(1, progress));
-                    
-                    // 1. Paint Animation (0.0 to 0.4)
-                    let paintProgress = Math.min(1, progress / 0.4);
-                    // stroke-dashoffset from 0 to -12000
-                    paintBrush.style.strokeDashoffset = -(12000 * paintProgress);
-                    
-                    // 2. Send Animation (0.5 to 1.0)
-                    // Map progress from 0.5 to 1.0 into a 0.0 to 1.0 range for the send animation
+                    let paintProgress = 0;
                     let sendProgress = 0;
-                    if (progress > 0.5) {
-                        sendProgress = Math.min(1, (progress - 0.5) / 0.5);
+
+                    if (window.innerWidth <= 850) {
+                        // On mobile, the section is not sticky. Animate based on element visibility.
+                        const paintSvg = document.querySelector('.paint-svg');
+                        if (paintSvg) {
+                            const pRect = paintSvg.getBoundingClientRect();
+                            let p = (windowHeight * 0.9 - pRect.top) / (windowHeight * 0.5);
+                            paintProgress = Math.max(0, Math.min(1, p));
+                        }
+                        if (sendSvg) {
+                            const sRect = sendSvg.getBoundingClientRect();
+                            let s = (windowHeight * 0.9 - sRect.top) / (windowHeight * 0.5);
+                            sendProgress = Math.max(0, Math.min(1, s));
+                        }
+                    } else {
+                        // On desktop, the section is sticky.
+                        const scrollableDistance = rect.height - windowHeight;
+                        let progress = 0;
+                        
+                        if (scrollableDistance > 0) {
+                            progress = -rect.top / scrollableDistance;
+                        }
+                        progress = Math.max(0, Math.min(1, progress));
+                        
+                        // 1. Paint Animation (0.0 to 0.4)
+                        paintProgress = Math.min(1, progress / 0.4);
+                        
+                        // 2. Send Animation (0.5 to 1.0)
+                        if (progress > 0.5) {
+                            sendProgress = Math.min(1, (progress - 0.5) / 0.5);
+                        }
                     }
+                    
+                    // Apply paint animation
+                    paintBrush.style.strokeDashoffset = -(12000 * paintProgress);
                     
                     // Fade up envelope (0.0 to 0.2 of sendProgress)
                     const fadeProgress = Math.min(1, sendProgress / 0.2);
