@@ -1719,7 +1719,4 @@ body.splash-active {
         width: 180px;
         height: 250px;
     }
-    .lc-1 { transform: translate(-90%, -70%) rotate(-12deg); }
-    .lc-2 { transform: translate(10%, -50%) rotate(8deg); }
-    .lc-3 { transform: translate(-40%, -10%) rotate(-4deg); }
 }
