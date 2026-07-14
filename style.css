@@ -10,6 +10,8 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         * {
@@ -23,7 +25,9 @@
             color: var(--text-color);
             font-family: 'DM Mono', monospace;
             line-height: 1.6;
-            overflow-x: hidden;
+            overflow-x: hidden !important;
+            width: 100%;
+            position: relative;
         }
 
         h1, h2, h3, .special-font {
@@ -266,6 +270,7 @@
             max-width: 350px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             background-color: var(--white);
+            overflow: hidden;
         }
 
         .send-svg {
