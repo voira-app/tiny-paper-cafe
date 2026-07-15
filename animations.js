@@ -119,33 +119,49 @@ document.addEventListener('DOMContentLoaded', () => {
             const windowHeight = window.innerHeight;
             
             // The section is tall. We start animating when it pins (top <= 0)
-            const scrollableDistance = rect.height - windowHeight;
-            let progress = 0;
+            const isMobile = window.innerWidth <= 850;
+            const bias = isMobile ? windowHeight * 0.45 : 0;
             
-            if (scrollableDistance > 0) {
-                // Trigger animation earlier when the top of the section is 45% down the viewport
-                const bias = window.innerWidth <= 850 ? windowHeight * 0.45 : 0;
-                progress = (-rect.top + bias) / scrollableDistance;
+            // True distance from start (rect.top = bias) to end (rect.bottom = windowHeight)
+            let totalScrollDist = rect.height - windowHeight;
+            if (isMobile) {
+                totalScrollDist = bias - windowHeight + rect.height;
+                // Fallback to prevent divide by zero if section is very short
+                if (totalScrollDist < 100) totalScrollDist = rect.height;
+            }
+            
+            let progress = 0;
+            if (totalScrollDist > 0) {
+                progress = (-rect.top + bias) / totalScrollDist;
             }
             progress = Math.max(0, Math.min(1, progress));
             
-            // 1. Paint Animation (0.0 to 0.3)
-            let paintProgress = Math.min(1, progress / 0.3);
+            // 1. Paint Animation
+            const paintStart = 0;
+            const paintEnd = isMobile ? 0.33 : 0.4;
+            let paintProgress = 0;
+            if (progress > paintStart) {
+                paintProgress = Math.min(1, (progress - paintStart) / (paintEnd - paintStart));
+            }
             paintBrush.style.strokeDashoffset = 12000 - (12000 * paintProgress);
             
-            // 1.5 Write Animation (0.25 to 0.45)
+            // 1.5 Write Animation
             if (writeOverlay) {
+                const writeStart = isMobile ? 0.33 : 0.35;
+                const writeEnd = isMobile ? 0.66 : 0.55;
                 let writeProgress = 0;
-                if (progress > 0.25) {
-                    writeProgress = Math.min(1, (progress - 0.25) / 0.20);
+                if (progress > writeStart) {
+                    writeProgress = Math.min(1, (progress - writeStart) / (writeEnd - writeStart));
                 }
                 writeOverlay.style.clipPath = `polygon(0 0, ${writeProgress * 100}% 0, ${writeProgress * 100}% 100%, 0 100%)`;
             }
             
-            // 2. Send Animation (0.4 to 0.9)
+            // 2. Send Animation
+            const sendStart = isMobile ? 0.66 : 0.5;
+            const sendEnd = 1.0;
             let sendProgress = 0;
-            if (progress > 0.4) {
-                sendProgress = Math.min(1, (progress - 0.4) / 0.5);
+            if (progress > sendStart) {
+                sendProgress = Math.min(1, (progress - sendStart) / (sendEnd - sendStart));
             }
             
             // Fade up envelope
