@@ -8,8 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="transition.css">
 </head>
-<body class="legal-page">
+<body class="legal-page">    <!-- Page Transition Overlay -->
+    <div id="page-transition-overlay" class="is-active">
+        <script>
+            if (sessionStorage.getItem('playOutAnimation') !== 'true') {
+                document.getElementById('page-transition-overlay').style.display = 'none';
+            }
+        </script>
+        <div class="transition-stripe s1 is-covering"></div>
+        <div class="transition-stripe s2 is-covering"></div>
+        <div class="transition-stripe s3 is-covering"></div>
+        <div class="transition-stripe s4 is-covering"></div>
+        <div class="transition-stripe s5 is-covering"></div>
+        <div class="transition-stripe s6 is-covering"></div>
+    </div>
+    <!-- Rough Edge SVG Filter -->
+    <svg style="width:0; height:0; position:absolute;" aria-hidden="true">
+        <filter id="rough-edge">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
 
     <!-- 1. Navigation -->
     <nav>
@@ -73,5 +94,7 @@
         </div>
     </footer>
 
+    <script src="transition.js"></script>
 </body>
 </html>
+

@@ -8,8 +8,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="transition.css">
 </head>
 <body style="padding-top: 100px; background-color: var(--bg-color);">
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition-overlay" class="is-active">
+        <script>
+            if (sessionStorage.getItem('playOutAnimation') !== 'true') {
+                document.getElementById('page-transition-overlay').style.display = 'none';
+            }
+        </script>
+        <div class="transition-stripe s1 is-covering"></div>
+        <div class="transition-stripe s2 is-covering"></div>
+        <div class="transition-stripe s3 is-covering"></div>
+        <div class="transition-stripe s4 is-covering"></div>
+        <div class="transition-stripe s5 is-covering"></div>
+        <div class="transition-stripe s6 is-covering"></div>
+    </div>
+    <!-- Rough Edge SVG Filter -->
+    <svg style="width:0; height:0; position:absolute;" aria-hidden="true">
+        <filter id="rough-edge">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
 
     <!-- Navigation -->
     <nav class="scrolled">
@@ -26,12 +49,34 @@
     </nav>
 
     <!-- About Section -->
-    <section class="about-page-container" style="max-width: 800px; margin: 4rem auto; padding: 2rem; min-height: 60vh;">
-        <h1 class="special-font" style="font-size: 3.5rem; color: var(--text-color); margin-bottom: 2rem; text-align: center;">About Us</h1>
-        <div style="font-size: 1.15rem; line-height: 1.8; color: var(--text-color); text-align: center;">
-            <p style="margin-bottom: 1.5rem;">Welcome to Tiny Paper Café.</p>
-            <p style="margin-bottom: 1.5rem;">[Hier kannst du deinen Text für die About-Seite einfügen, deine Geschichte erzählen und Bilder hinzufügen.]</p>
+    <section class="about-page-container" style="max-width: 1200px; margin: 4rem auto; padding: 2rem; min-height: 60vh;">
+        
+        <div class="about-grid">
+            <div class="about-text-col">
+                <h1 class="special-font">About Tiny Paper Café</h1>
+                <p>Tiny Paper Café was founded by Jaspinder, a graphic designer with a background in events and barista work, who loves creating spaces where people can connect, slow down, and create something meaningful.</p>
+                <p>After moving from Norway to Switzerland, she wanted to create a place where everyone could relax, paint, and write, with no experience needed. Inspired by the joy of sending postcards to friends and family, Tiny Paper Café was born from the idea that a small piece of paper can carry big emotions, memories, and stories.</p>
+                <p>More than just a painting café, Tiny Paper Café is a place to enjoy the full experience: creating a postcard by hand, writing a thoughtful message, and sending a little surprise to someone’s mailbox.</p>
+                <p>The menu is kept small but made with love, featuring coffee, matcha, chai, refreshing iced drinks, and homemade Norwegian treats.</p>
+            </div>
+            <div class="about-image-col">
+                <img src="IMG_8530.jpeg" alt="Portrait Jaspinder">
+            </div>
         </div>
+
+        <div style="display: flex; justify-content: center; margin: 6rem 0 3rem 0;">
+            <svg width="150" height="15" viewBox="0 0 150 15" xmlns="http://www.w3.org/2000/svg">
+                <!-- Wobbly hand-drawn line to match the paper style -->
+                <path d="M 0 7 C 25 2, 50 12, 75 7 C 100 2, 125 12, 150 7" fill="none" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round" opacity="0.25" />
+            </svg>
+        </div>
+
+        <section class="contact-section">
+            <h2 class="special-font">Contact</h2>
+            <p>Curious about the concept or want to create an private event for birthday celebration, bachelorette party or teambuilding?<br><br>Get in touch and share your ideas!</p>
+            <a href="mailto:hello@tinypapercafe.com" class="contact-link">Hello@tinypapercafe.com</a>
+        </section>
+
     </section>
 
     <!-- Footer -->
@@ -53,5 +98,6 @@
         </div>
     </footer>
 
+    <script src="transition.js"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+/* transition.css */
+
+#page-transition-overlay {
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    width: 100vw;
+    height: 120vh;
+    z-index: 999999;
+    display: flex;
+    pointer-events: none; /* Let clicks pass through when not active */
+}
+
+/* We set pointer-events: auto via JS when transition is active so user can't click things while animating */
+#page-transition-overlay.is-active {
+    pointer-events: auto;
+}
+
+.transition-stripe {
+    flex: 1;
+    height: 100%;
+    transform: translateY(100%);
+    will-change: transform;
+    /* Rough edge filter */
+    filter: url(#rough-edge);
+}
+
+/* Colors based on Voria Palette */
+.transition-stripe.s1 { background-color: #AD5723; }
+.transition-stripe.s2 { background-color: #BB9B2C; }
+.transition-stripe.s3 { background-color: #F3F1B2; }
+.transition-stripe.s4 { background-color: #BBD2D5; }
+.transition-stripe.s5 { background-color: #6A79A4; }
+.transition-stripe.s6 { background-color: #EAC5C5; }
+
+/* 
+   Animation Classes 
+   We have 3 states:
+   1. translateY(100%) - Hidden at bottom (default)
+   2. translateY(0%) - Covering the screen (.is-covering)
+   3. translateY(-100%) - Hidden at top (.is-hidden-top)
+*/
+
+.transition-stripe {
+    transition: transform 700ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Delays for the "In" animation (bottom to cover) */
+#page-transition-overlay.animating-in .transition-stripe.s1 { transition-delay: 0ms; }
+#page-transition-overlay.animating-in .transition-stripe.s2 { transition-delay: 60ms; }
+#page-transition-overlay.animating-in .transition-stripe.s3 { transition-delay: 120ms; }
+#page-transition-overlay.animating-in .transition-stripe.s4 { transition-delay: 180ms; }
+#page-transition-overlay.animating-in .transition-stripe.s5 { transition-delay: 240ms; }
+#page-transition-overlay.animating-in .transition-stripe.s6 { transition-delay: 300ms; }
+
+/* Delays for the "Out" animation (cover to top) */
+/* We keep the same left-to-right order, so s1 starts moving up first */
+#page-transition-overlay.animating-out .transition-stripe.s1 { transition-delay: 0ms; }
+#page-transition-overlay.animating-out .transition-stripe.s2 { transition-delay: 60ms; }
+#page-transition-overlay.animating-out .transition-stripe.s3 { transition-delay: 120ms; }
+#page-transition-overlay.animating-out .transition-stripe.s4 { transition-delay: 180ms; }
+#page-transition-overlay.animating-out .transition-stripe.s5 { transition-delay: 240ms; }
+#page-transition-overlay.animating-out .transition-stripe.s6 { transition-delay: 300ms; }
+
+/* State classes applied via JS */
+.transition-stripe.is-covering {
+    transform: translateY(0%);
+}
+
+.transition-stripe.is-hidden-top {
+    transform: translateY(-100%);
+}
