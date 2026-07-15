@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 1. Paint Animation
             const paintStart = 0;
-            const paintEnd = isMobile ? 0.33 : 0.4;
+            const paintEnd = isMobile ? 0.80 : 0.4;
             let paintProgress = 0;
             if (progress > paintStart) {
                 paintProgress = Math.min(1, (progress - paintStart) / (paintEnd - paintStart));
@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 1.5 Write Animation
             if (writeOverlay) {
-                const writeStart = isMobile ? 0.33 : 0.35;
-                const writeEnd = isMobile ? 0.66 : 0.55;
+                const writeStart = isMobile ? 0.10 : 0.35;
+                const writeEnd = isMobile ? 0.90 : 0.55;
                 let writeProgress = 0;
                 if (progress > writeStart) {
                     writeProgress = Math.min(1, (progress - writeStart) / (writeEnd - writeStart));
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // 2. Send Animation
-            const sendStart = isMobile ? 0.66 : 0.5;
+            const sendStart = isMobile ? 0.20 : 0.5;
             const sendEnd = 1.0;
             let sendProgress = 0;
             if (progress > sendStart) {
