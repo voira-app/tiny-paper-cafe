@@ -123,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let progress = 0;
             
             if (scrollableDistance > 0) {
-                // Trigger animation earlier when the top of the section is 75% down the viewport
-                const bias = window.innerWidth <= 850 ? windowHeight * 0.75 : 0;
+                // Trigger animation earlier when the top of the section is 45% down the viewport
+                const bias = window.innerWidth <= 850 ? windowHeight * 0.45 : 0;
                 progress = (-rect.top + bias) / scrollableDistance;
             }
             progress = Math.max(0, Math.min(1, progress));
