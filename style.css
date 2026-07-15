@@ -1414,21 +1414,31 @@
             }
 
             /* EXPERIENCE */
+            .experience-section {
+                height: auto; /* Disabled 250vh constraint */
+            }
+            .experience-sticky {
+                position: relative;
+                height: auto;
+                overflow: visible;
+                padding: 4rem 1rem 2rem 1rem;
+            }
             .process-grid {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 5rem; /* ~80px spacing between blocks */
             }
             .process-col h2 {
                 font-size: 1.6rem;
-                margin-bottom: 0.5rem;
+                margin-bottom: 1.5rem; /* ~24px between title and image */
             }
             .process-desc {
                 font-size: 0.8rem;
-                margin-top: 0.5rem;
+                margin-top: 1.5rem; /* ~24px between image and text */
                 line-height: 1.4;
             }
             .process-img {
-                max-width: 170px;
+                max-width: 85vw;
+                width: 100%;
             }
             .desktop-hint {
                 display: none !important;
@@ -1845,7 +1855,5 @@ body.splash-active {
 }
 
 @media (max-width: 850px) {
-    .experience-section {
-        height: 250vh; /* Shorter scroll duration on mobile to prevent scroll fatigue */
-    }
+    /* Removed .experience-section height rule from here as it's now handled above */
 }
