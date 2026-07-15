@@ -118,33 +118,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = experienceSection.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             
-            // The section is tall (e.g. 300vh). We start animating when it pins (top <= 0)
-            // and finish when it's about to unpin (bottom <= windowHeight).
+            // The section is tall. We start animating when it pins (top <= 0)
             const scrollableDistance = rect.height - windowHeight;
             let progress = 0;
             
             if (scrollableDistance > 0) {
-                progress = -rect.top / scrollableDistance;
+                // Add a slight bias to start animation earlier when scrolling
+                const bias = window.innerWidth <= 850 ? scrollableDistance * 0.1 : 0;
+                progress = (-rect.top + bias) / scrollableDistance;
             }
             progress = Math.max(0, Math.min(1, progress));
             
-            // 1. Paint Animation (0.0 to 0.4)
-            let paintProgress = Math.min(1, progress / 0.4);
+            // 1. Paint Animation (0.0 to 0.3)
+            let paintProgress = Math.min(1, progress / 0.3);
             paintBrush.style.strokeDashoffset = 12000 - (12000 * paintProgress);
             
-            // 1.5 Write Animation (0.35 to 0.55)
+            // 1.5 Write Animation (0.25 to 0.45)
             if (writeOverlay) {
                 let writeProgress = 0;
-                if (progress > 0.35) {
-                    writeProgress = Math.min(1, (progress - 0.35) / 0.20);
+                if (progress > 0.25) {
+                    writeProgress = Math.min(1, (progress - 0.25) / 0.20);
                 }
                 writeOverlay.style.clipPath = `polygon(0 0, ${writeProgress * 100}% 0, ${writeProgress * 100}% 100%, 0 100%)`;
             }
             
-            // 2. Send Animation (0.5 to 1.0)
+            // 2. Send Animation (0.4 to 0.9)
             let sendProgress = 0;
-            if (progress > 0.5) {
-                sendProgress = Math.min(1, (progress - 0.5) / 0.5);
+            if (progress > 0.4) {
+                sendProgress = Math.min(1, (progress - 0.4) / 0.5);
             }
             
             // Fade up envelope
