@@ -544,6 +544,7 @@
             display: flex;
             align-items: stretch;
             justify-content: center;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .menu-wrapper {
@@ -552,7 +553,7 @@
         }
 
         .menu-card {
-            background-color: var(--bg-color); /* Changed to beige */
+            background-color: #ffffff;
             padding: 4rem 3rem;
             border-radius: 8px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.15);
@@ -568,6 +569,8 @@
             margin-bottom: 1rem;
             color: var(--text-color);
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
         }
 
         .menu-subtitle {
@@ -591,9 +594,9 @@
         }
 
         .menu-category {
-            font-family: 'Special Elite', cursive;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 1.2rem;
             margin-top: 2.5rem;
             letter-spacing: 1px;
@@ -606,7 +609,7 @@
 
         .menu-description {
             font-size: 0.95rem;
-            color: var(--muted-color);
+            color: #555555;
             margin-top: -0.5rem;
             margin-bottom: 1.5rem;
             line-height: 1.5;
@@ -624,7 +627,7 @@
 
         .menu-addon {
             font-size: 0.95rem;
-            color: var(--muted-color);
+            color: #555555;
             display: flex;
             justify-content: space-between;
             padding-left: 1rem;
